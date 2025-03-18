@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "373142728307",
+    "project_id": "donanice-3096e",
+    "storage_bucket": "donanice-3096e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373142728307:android:94cc412d5de97dc9574406",
+        "android_client_info": {
+          "package_name": "br.com.octashield.donanice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373142728307-r19lb4gjp8jvneprc8q17ee1t7h09or1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.octashield.donanice",
+            "certificate_hash": "2eddc44b48776b7c3209fbd8c4b7d76f0a23e1ba"
+          }
+        },
+        {
+          "client_id": "373142728307-i3oca58i39he92jn5qjose8ujbfova0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt9gYJyRBlOG82_AlfNzosEroz6jnuswc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373142728307-i3oca58i39he92jn5qjose8ujbfova0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
