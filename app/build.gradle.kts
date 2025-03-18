@@ -72,6 +72,7 @@ dependencies {
     // 🔹 RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0")
+    implementation(libs.zxing.android.embedded)
 }
 
 // 🔹 Plugin do Google Services para Firebase
