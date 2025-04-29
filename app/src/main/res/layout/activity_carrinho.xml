@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: R$ 0,00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnLerCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ler Código de Barras" />
+
+        <EditText
+            android:id="@+id/edtCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Código de Barras"
+            android:enabled="false"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtNomeProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome do Produto (opcional)"
+            android:inputType="text"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtValorUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor Unitário"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtQtde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantidade"
+            android:inputType="number"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar Leitura" />
+
+        <!-- ✅ Agora o Menor Preço logo aqui! -->
+        <TextView
+            android:id="@+id/txtMenorPreco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="💰 Menor preço próximo: R$ 0,00"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnConfiguracoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Configurações"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/btnHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Histórico de Leituras"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnZerar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zerar Carrinho"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+</ScrollView>

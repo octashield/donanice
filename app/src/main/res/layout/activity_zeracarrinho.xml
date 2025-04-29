@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtResumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resumo do Carrinho"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCarrinho"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: R$ 0,00"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnContinuar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Continuar comprando"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnZerar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Zerar Carrinho"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</LinearLayout>
