@@ -38,6 +38,10 @@
         <activity android:name=".ZeraCarrinhoActivity" />
         <activity android:name=".ConfiguracoesActivity" />
         <activity android:name=".ui.HistoricoActivity" />
+        <activity android:name=".MainMenuActivity" />
+        <activity android:name=".PerfilActivity"/>
+
+
     </application>
 
 </manifest>

@@ -5,16 +5,21 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "leitura")
 data class Leitura(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    val userId: String,
-    val codigo: String,
-    val nome: String? = null,
-    val valorUnit: Double,
-    val qtde: Int,
-    val data: String,
-    val hora: String,
-    val latitude: Double,
-    val longitude: Double,
-    val sincronizado: Boolean = false
-)
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0,
+    var userId: String = "",
+    var codigo: String = "",
+    var nome: String? = null,
+    var valorUnit: Double = 0.0,
+    var qtde: Int = 0,
+    var data: String = "",
+    var hora: String = "",
+    var latitude: Double = 0.0,
+    var longitude: Double = 0.0,
+    var sincronizado: Boolean = false
+) {
+    // 🔥 Construtor vazio necessário para o Firebase
+    constructor() : this(0, "", "", null, 0.0, 0, "", "", 0.0, 0.0, false)
+}
+
 

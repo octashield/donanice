@@ -40,17 +40,30 @@ class RegistrarActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (!dataValida(nascimento)) {
-                Toast.makeText(this, "Data de nascimento inválida!", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
             auth.createUserWithEmailAndPassword(email, senha)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this, LoginActivity::class.java))
-                        finish()
+                        val userId = auth.currentUser?.uid ?: return@addOnCompleteListener
+
+                        // Dados adicionais do usuário
+                        val dadosUsuario = mapOf(
+                            "nome" to nome,
+                            "email" to email,
+                            "genero" to genero,
+                            "nascimento" to nascimento
+                        )
+
+                        // Salvar no Realtime Database
+                        val dbRef = com.google.firebase.database.FirebaseDatabase.getInstance().reference
+                        dbRef.child("usuarios").child(userId).setValue(dadosUsuario)
+                            .addOnSuccessListener {
+                                Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show()
+                                startActivity(Intent(this, LoginActivity::class.java))
+                                finish()
+                            }
+                            .addOnFailureListener { e ->
+                                Toast.makeText(this, "Erro ao salvar dados: ${e.message}", Toast.LENGTH_LONG).show()
+                            }
                     } else {
                         Toast.makeText(this, "Erro: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                     }
